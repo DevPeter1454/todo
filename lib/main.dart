@@ -91,16 +91,30 @@ class _MyHomePageState extends State<MyHomePage> {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Text('Add to-do description'),
+                      // const Text('Add to-do description'),
                       TextField(
+                        decoration: InputDecoration(
+                          labelText: 'Add to-do description',
+                          labelStyle: TextStyle(
+                            color: Colors.pink[100],
+                          ),
+                        ),
+                        cursorColor: Colors.pink[200],
                         onChanged: (value) {
                           description = value;
                         },
                       ),
-                      const SizedBox(height: 20),
-                      const Text('Add to-do'),
+                      const SizedBox(height: 5),
+                      // const Text('Add to-do'),
                       TextField(
-                        maxLines: 8,
+                        decoration: InputDecoration(
+                          labelText: 'Add to-do description',
+                          labelStyle: TextStyle(
+                            color: Colors.pink[100],
+                          ),
+                        ),
+                        maxLines: 4,
+                        cursorColor: Colors.pink[200],
                         onChanged: (value) {
                           input = value;
                         },
