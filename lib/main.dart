@@ -5,9 +5,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,11 +35,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool isdark = true;
   var input = '';
   var description = '';
   List todos = [];
   List describe = [];
-
+  var mode = 'dark';
   @override
   void initState() {
     super.initState();
@@ -109,6 +115,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   actions: [
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.pink[600],
+                        onPrimary: Colors.white,
+                      ),
                       onPressed: () {
                         if (input != '' && description != '') {
                           setState(() {
@@ -121,6 +131,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: const Text('Add'),
                     ),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.pink[300],
+                        onPrimary: Colors.white,
+                      ),
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
