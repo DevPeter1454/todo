@@ -39,9 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     todos.add('Buy milk');
-    describe.add('Buy eggs');
+    describe.add('Remember to buy milk');
     todos.add('Buy milk');
-    describe.add('Buy eggs');
+    describe.add('Remember to buy eggs');
     // todos.add('Buy bread');
   }
 
