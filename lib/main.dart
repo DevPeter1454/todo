@@ -56,22 +56,31 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.builder(
           itemCount: todos.length,
           itemBuilder: (BuildContext context, int index) {
-            return Card(
-              elevation: 10.0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: ListTile(
-                title: Text(describe[index]),
-                subtitle: Text(todos[index]),
-                trailing: IconButton(
-                  icon: Icon(Icons.delete, color: Colors.pinkAccent[100]),
-                  onPressed: () {
-                    setState(() {
-                      todos.removeAt(index);
-                      describe.removeAt(index);
-                    });
-                  },
+            return Dismissible(
+              key: Key(todos[index]),
+              onDismissed: (direction) {
+                setState(() {
+                  todos.removeAt(index);
+                  describe.removeAt(index);
+                });
+              },
+              child: Card(
+                elevation: 10.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                child: ListTile(
+                  title: Text(describe[index]),
+                  subtitle: Text(todos[index]),
+                  trailing: IconButton(
+                    icon: Icon(Icons.delete, color: Colors.pinkAccent[100]),
+                    onPressed: () {
+                      setState(() {
+                        todos.removeAt(index);
+                        describe.removeAt(index);
+                      });
+                    },
+                  ),
                 ),
               ),
             );
