@@ -1,6 +1,8 @@
 # todo
 
 A new Flutter project.
+A To-do app without persistent data
+
 
 ## Getting Started
 
