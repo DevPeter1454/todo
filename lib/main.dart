@@ -91,7 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // const Text('Add to-do description'),
                       TextField(
                         decoration: InputDecoration(
                           labelText: 'Add to-do description',
@@ -105,7 +104,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                       ),
                       const SizedBox(height: 5),
-                      // const Text('Add to-do'),
                       TextField(
                         decoration: InputDecoration(
                           labelText: 'Add to-do description',
