@@ -40,15 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
   var description = '';
   List todos = [];
   List describe = [];
-  var mode = 'dark';
   @override
   void initState() {
     super.initState();
-    todos.add('Buy milk');
-    describe.add('Remember to buy milk');
-    todos.add('Buy milk');
-    describe.add('Remember to buy eggs');
-    // todos.add('Buy bread');
   }
 
   @override
